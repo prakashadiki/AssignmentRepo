@@ -39,11 +39,8 @@ public class TripAdvisorPage {
 	@FindBy(xpath = "//div[@title='Search']")
 	private WebElement search;
 	
-	@FindBy(name = "q")
+	@FindBy(xpath = "//input[@title='Search']")
 	private WebElement searchInput;
-	
-	@FindBy(xpath = "//iframe[@src='https://t.effectivemeasure.net/frame.494af32.html']")
-	private WebElement frame;
 	
 	@FindBy(id = "mainSearch")
 	private WebElement searchBox;
@@ -106,8 +103,7 @@ public class TripAdvisorPage {
 			searchBox.sendKeys(data);
 			searchBtn.click();
 			
-		} else {
-			driver.switchTo().frame(frame);
+		} else if (searchInput.isDisplayed()) {			
 			common.waitAndClick(searchInput);
 			searchInput.sendKeys(data, Keys.ENTER);
 		} 
@@ -144,17 +140,17 @@ public class TripAdvisorPage {
 		
 		if(hotelServiceRating.isDisplayed()) {
 			common.scroll(driver, hotelServiceRating);
-			mouseHover(hotelServiceRating, 30);
+			mouseHover(hotelServiceRating, 50);
 		}
 		
 		if (hotelLocationRating.isDisplayed()) {
 			common.scroll(driver, hotelLocationRating);
-			mouseHover(hotelLocationRating, 30);
+			mouseHover(hotelLocationRating, 50);
 		}
 		
 		if(hotelRoomsRating.isDisplayed()) {
 			common.scroll(driver, hotelRoomsRating);
-			mouseHover(hotelRoomsRating, 30);
+			mouseHover(hotelRoomsRating, 50);
 		}
 	
 	}

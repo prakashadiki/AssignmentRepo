@@ -39,6 +39,7 @@ public class Amazon_FlipkartTest extends BaseClass {
 			Reporter.log("Price : "+amazonPrice, true);
 		}else {
 			Reporter.log("Amazon and Flipkart Both have same price", true);
+			Reporter.log("Price : "+amazonPrice, true);
 		}
 		
 		

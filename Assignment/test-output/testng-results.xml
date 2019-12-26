@@ -1,29 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Amazon has Lesser Price than flipkart]]>
+    </line>
+    <line>
+      <![CDATA[Price : 47900]]>
+    </line>
   </reporter-output>
-  <suite started-at="2019-12-26T05:42:16Z" name="Default suite" finished-at="2019-12-26T05:43:04Z" duration-ms="48154">
+  <suite started-at="2019-12-26T06:45:55Z" name="Suite" finished-at="2019-12-26T06:47:20Z" duration-ms="85374">
     <groups>
     </groups>
-    <test started-at="2019-12-26T05:42:16Z" name="Default test" finished-at="2019-12-26T05:43:04Z" duration-ms="48154">
+    <test started-at="2019-12-26T06:45:55Z" name="Test" finished-at="2019-12-26T06:47:20Z" duration-ms="85374">
       <class name="trip_advisor.TripAdvisorTest">
-        <test-method is-config="true" signature="configBC()[pri:0, instance:trip_advisor.TripAdvisorTest@6f3b5d16]" started-at="2019-12-26T11:12:16Z" name="configBC" finished-at="2019-12-26T11:12:22Z" duration-ms="6228" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:trip_advisor.TripAdvisorTest@657c8ad9]" started-at="2019-12-26T12:15:55Z" name="configBC" finished-at="2019-12-26T12:16:01Z" duration-ms="6608" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method signature="rateTripAdvisorTest()[pri:0, instance:trip_advisor.TripAdvisorTest@6f3b5d16]" started-at="2019-12-26T11:12:22Z" name="rateTripAdvisorTest" finished-at="2019-12-26T11:12:54Z" duration-ms="31853" status="PASS">
+        <test-method signature="rateTripAdvisorTest()[pri:0, instance:trip_advisor.TripAdvisorTest@657c8ad9]" started-at="2019-12-26T12:16:01Z" name="rateTripAdvisorTest" finished-at="2019-12-26T12:16:33Z" duration-ms="31695" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- rateTripAdvisorTest -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:trip_advisor.TripAdvisorTest@6f3b5d16]" started-at="2019-12-26T11:12:54Z" name="configAC" finished-at="2019-12-26T11:13:04Z" duration-ms="10057" status="PASS">
+        <test-method is-config="true" signature="configAC()[pri:0, instance:trip_advisor.TripAdvisorTest@657c8ad9]" started-at="2019-12-26T12:16:33Z" name="configAC" finished-at="2019-12-26T12:16:44Z" duration-ms="10917" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAfterSuite()[pri:0, instance:trip_advisor.TripAdvisorTest@6f3b5d16]" started-at="2019-12-26T11:13:04Z" name="configAfterSuite" finished-at="2019-12-26T11:13:04Z" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="configAfterSuite()[pri:0, instance:trip_advisor.TripAdvisorTest@657c8ad9]" started-at="2019-12-26T12:17:20Z" name="configAfterSuite" finished-at="2019-12-26T12:17:20Z" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAfterSuite -->
       </class> <!-- trip_advisor.TripAdvisorTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="amazon_flipkart.Amazon_FlipkartTest">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:amazon_flipkart.Amazon_FlipkartTest@436a4e4b]" started-at="2019-12-26T12:16:44Z" name="configBC" finished-at="2019-12-26T12:16:50Z" duration-ms="6348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBC -->
+        <test-method signature="comparePriceTest()[pri:0, instance:amazon_flipkart.Amazon_FlipkartTest@436a4e4b]" started-at="2019-12-26T12:16:50Z" name="comparePriceTest" finished-at="2019-12-26T12:17:04Z" duration-ms="13862" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Amazon has Lesser Price than flipkart]]>
+            </line>
+            <line>
+              <![CDATA[Price : 47900]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- comparePriceTest -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:amazon_flipkart.Amazon_FlipkartTest@436a4e4b]" started-at="2019-12-26T12:17:04Z" name="configAC" finished-at="2019-12-26T12:17:20Z" duration-ms="15919" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+      </class> <!-- amazon_flipkart.Amazon_FlipkartTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

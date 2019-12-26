@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test name="Default test(failed)">
     <classes>
       <class name="trip_advisor.TripAdvisorTest">
         <methods>
@@ -11,14 +11,6 @@
           <include name="configAC"/>
         </methods>
       </class> <!-- trip_advisor.TripAdvisorTest -->
-      <class name="amazon_flipkart.Amazon_FlipkartTest">
-        <methods>
-          <include name="configBC"/>
-          <include name="comparePriceTest"/>
-          <include name="configAfterSuite"/>
-          <include name="configAC"/>
-        </methods>
-      </class> <!-- amazon_flipkart.Amazon_FlipkartTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
