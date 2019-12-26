@@ -176,4 +176,9 @@ public class CommonLibrary implements IFilePaths,IAutoConstants{
 			}
 		}
 	}
+	
+	public void scroll(WebDriver driver, WebElement element) {
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("arguments[0].scrollIntoView();", element);
+	}
 }

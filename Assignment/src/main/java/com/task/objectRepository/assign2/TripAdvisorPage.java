@@ -3,6 +3,7 @@ package com.task.objectRepository.assign2;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -16,6 +17,7 @@ import com.task.genericLib.FileLib;
  */
 public class TripAdvisorPage {
 
+	
 	private WebDriver driver;
 	private CommonLibrary common;
 	
@@ -39,6 +41,9 @@ public class TripAdvisorPage {
 	
 	@FindBy(name = "q")
 	private WebElement searchInput;
+	
+	@FindBy(xpath = "//iframe[@src='https://t.effectivemeasure.net/frame.494af32.html']")
+	private WebElement frame;
 	
 	@FindBy(id = "mainSearch")
 	private WebElement searchBox;
@@ -96,12 +101,13 @@ public class TripAdvisorPage {
 		common.waitForPageToLoad();
 		
 	
-		try {
+		if(search.isDisplayed()) {
 			common.waitAndClick(search);
 			searchBox.sendKeys(data);
 			searchBtn.click();
 			
-		} catch (Throwable e) {
+		} else {
+			driver.switchTo().frame(frame);
 			common.waitAndClick(searchInput);
 			searchInput.sendKeys(data, Keys.ENTER);
 		} 
@@ -128,16 +134,29 @@ public class TripAdvisorPage {
 	
 	public void clickonRating() throws Throwable {
 		common.waitForPageToLoad();
-		common.waitAndClick(rating);
+		mouseHover(rating, 50);
 		
 	}
 	
 	
 	public void clickOnHotelRatings() throws Throwable {
 		common.waitForPageToLoad();
-		common.waitAndClick(hotelServiceRating);
-		common.waitAndClick(hotelLocationRating);
-		common.waitAndClick(hotelRoomsRating);
+		
+		if(hotelServiceRating.isDisplayed()) {
+			common.scroll(driver, hotelServiceRating);
+			mouseHover(hotelServiceRating, 30);
+		}
+		
+		if (hotelLocationRating.isDisplayed()) {
+			common.scroll(driver, hotelLocationRating);
+			mouseHover(hotelLocationRating, 30);
+		}
+		
+		if(hotelRoomsRating.isDisplayed()) {
+			common.scroll(driver, hotelRoomsRating);
+			mouseHover(hotelRoomsRating, 30);
+		}
+	
 	}
 	
 	
@@ -145,6 +164,13 @@ public class TripAdvisorPage {
 		common.waitForPageToLoad();
 		common.waitAndClick(certifyCheckBox);
 		common.waitAndClick(reviewSubmitBtn);
+	}
+	
+	public void mouseHover(WebElement wb, int x) {
+		Actions act = new Actions(driver);
+		act.moveToElement(wb, x, 0);
+		act.click();
+		act.perform();
 	}
 	
 }
